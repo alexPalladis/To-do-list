@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial scale=1.0">
+      <title>Task List</title>
+      
+      <link rel="stylesheet" href="main.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+    <body>
+    <div class="content">
+      <div id="left" class="sidenav">
+        
+        <a href="About.html" target="_blank">About</a>
+        <a href="#">Tasks</a>
+        <a href="#">Clients</a>
+        <a href="Contact.html" target="_blank">Contact</a>
+        <a id="copy">&copy; designed by AlexPal</a>
+        
+      </div>
+      
+      
+      <div id="myDIV" class="header">
+          <h2>My Task List</h2>
+        <div class="container">
+          <input type="text" id="myInput" placeholder="Write your task...">
+          <span onclick="newElement()" class="addBtn">ADD</span>
+        </div>
+      </div>
+          
+        <ul id="myUL" class="container2">
+          <li>Date: 2023-09-10 Go for walking</li>
+          <li class="checked">Date: 2023-09-05 Pay bills </li>
+          <li>Date: 2023-09-15 Meet Alex</li>
+          <li>Date: 2023-04-12 Buy grocery</li>
+          <li>Date: 2023-06-10 Read a book</li>
+          <li>Date: 2023-09-04 Clean the house</li>
+        </ul>
+        
+      
+        
+        
+        <div class="dropdown">
+          <button class="dropbtn">Categories</button>
+          <div class="dropdown-content">
+            <a  id="shopping" data-category="shopping">SHOPPPING</a>
+            <a id="meetings"data-category="meetings" >MEETINGS</a>
+            <a id="family"data-category="family" >FAMILY</a>
+            <a id="gymnastic" data-category="gymnastic">GYMNASTIC</a>
+            <a id="free-time"data-category="free-time" >FREE-TIME</a>
+          </div>
+        </div>
+      </div>
+        <div class="footer">
+          <button type="button" id="date" class="container2" onclick="sortItemsByDate()">Sort task by date</button>
+          <button type="button" id="alphabetically" class="container2">Sort task alphabetically</button>
+          <button type="button" id="discard" class="container2" onclick="discard()">Discard changes</button>
+          <button id="save" class="container2" onclick="saveChanges();">Save Changes</button>
+        </div>
+         
+        
+
+        <script src="main.js"></script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

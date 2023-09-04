@@ -1,0 +1,454 @@
+/*add a background image */
+body {
+  
+    background-image: url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?w=1380&t=st=1693732770~exp=1693733370~hmac=1d5de5bb9fc586508d05853dc4de15a6be118825a73f8dc45712e6f1cf46b2c8');
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, for a fixed background */
+}
+
+/*customize the sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  text-align: center;
+  word-break: break-all;
+  min-width: 25%;
+ 
+ 
+ 
+  
+  
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+
+.sidenav a:hover {
+  color: #2b3ee9;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  
+  }
+  body {
+    min-height: 100vh; /* Ensure the body takes up at least the viewport height */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+}
+.content {
+  flex-grow: 1; /* Grow to fill available space */
+  padding: 20px;
+}
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    overflow-wrap:break-word;
+    text-justify: auto;
+    min-width: fit-content;
+    padding-left: 40px;
+    
+    
+
+  }
+  .container2{
+    width: 70%;
+    margin-left: 25%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    
+    min-width: fit-content;
+    
+    
+  }
+  .container2::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*move margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    
+    
+   
+    
+    
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 150px 12px 20px;
+    background: #3f3c3c;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: center;
+   
+    
+    
+    
+   
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #615e5e;
+  }
+  
+  /* lighter background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    color: hsl(34, 95%, 45%);
+    
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* style the reminder button */
+  .reminder{
+    position: absolute;
+    
+    top: 2px;
+    right: 40px;
+    padding: 12px 16px 12px 16px;
+    color: #ccbdbb;
+}
+
+  .reminder:hover{
+    background-color: #f44336;
+    color: #3f3c3c;
+  }
+
+  /* style the category button */
+  .category{
+    position: absolute;
+    right: 80px;
+    top: 2px;
+    padding: 12px 16px 12px 16px;
+    color: #0a07b8;
+    font-weight: 700;
+    
+    
+  }
+  .category:hover{
+    background-color: #f44336;
+    color: white;
+  }
+  /* Style the header */
+  .header {
+    background-color: #2272FF;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-left: 25%;
+    min-width: fit-content;
+    
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 5px;
+    float: left;
+    font-size: 16px;
+    min-width: fit-content;
+    
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 5px;
+    width: 20%;
+    background: #070707;
+    color: #f30404;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    min-width: fit-content;
+    border-radius: 100px;
+    box-shadow:#3f3c3c ;
+    
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+#myOL{
+  position: relative;
+  left: 50%;
+
+}
+
+
+#discard{
+  text-align: center;
+  padding: 3px 4px 3px 4px;
+  position: absolute;
+  bottom: 10%;
+  left: 3rem;
+  min-width: fit-content;
+  max-width: fit-content;
+  border-radius: 100px;
+  box-shadow:#3f3c3c ;
+  color: #ccbdbb;
+  background-color: #111;
+ 
+
+}
+#discard:hover{
+  background-color: #2272FF;
+  cursor: pointer;
+}
+
+#date{
+  text-align: center;
+  padding: 3px 4px 3px 4px;
+  position: absolute;
+  bottom: 0%;
+  left: 3rem;
+  min-width: fit-content;
+  max-width: fit-content;
+  border-radius: 100px;
+  box-shadow:#3f3c3c ;
+  color: #ccbdbb;
+  background-color: #111;
+ 
+}
+
+
+ 
+
+#alphabetically{
+  text-align: center;
+  padding: 3px 4px 3px 4px;
+  position: absolute;
+  bottom: 5%;
+  left: 3rem;
+  
+  max-width: fit-content;
+  word-wrap: break-word;
+  flex-wrap: wrap;
+  border-radius: 100px;
+  box-shadow:#3f3c3c ;
+  color: #ccbdbb;
+  background-color: #111;
+  
+}
+#date:hover{
+  background-color: #2272FF;
+  cursor: pointer;
+}
+#alphabetically:hover{
+  background-color: #2272FF;
+  cursor: pointer;
+
+}
+.dropbtn{
+  border-radius: 100px;
+  box-shadow:#3f3c3c ;
+  color: #ccbdbb;
+  background-color: #111
+}
+
+.dropdown{
+  position: absolute;
+  left: 5.2rem;
+  top: 0.5rem;
+  margin-left: 20%;
+  
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+ 
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2272FF;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: small;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #2272FF;}
+
+#copy{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  font-weight: 700;
+  color: #2272FF;
+  
+  
+}
+.footer {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: flex-end; /* Align buttons to the bottom */
+  padding: 10px;
+}
+
+#save{
+  text-align: center;
+  padding: 3px 4px 3px 4px;
+  position: absolute;
+  bottom: 15%;
+  left: 3rem;
+  min-width: fit-content;
+  max-width: fit-content;
+  border-radius: 100px;
+  box-shadow:#3f3c3c ;
+  color: #ccbdbb;
+  background-color: #111;
+ 
+}
+
+#save:hover{
+  background-color: #2272FF;
+  cursor: pointer;
+}
+
+/* make the 4 buttons stick to the bottom and not overlap text on small screen size */
+@media screen and (max-width: 768px) {
+  #alphabetically,
+  #save,
+  #date,
+  #discard {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
